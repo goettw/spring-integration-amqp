@@ -24,8 +24,7 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... arg0) throws Exception {
-		MessageChannel inputChannel = context.getBean("inputChannel",
-				MessageChannel.class);
+		MessageChannel inputChannel = context.getBean("inputChannel",MessageChannel.class);
 		inputChannel.send(new GenericMessage<String>("Wolle"));
 
 	
